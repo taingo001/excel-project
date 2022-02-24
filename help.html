@@ -6,42 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/main_styles.css">
   <title>Help</title>
-  <link rel="shortcut icon" href="../Images/umb_logo.jpg">
-  <a href="./home.html"><img src="../Images/umb_logo.jpg" alt="UMass Boston Logo" height="90"></a>
+  <link rel="shortcut icon" href="../Images/group.png">
+  <style>
+    img{width: 80px;
+       height: 80px;}
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(10, 99, 71);
+         }
+    li {float: left;}
+    li a{display: block;
+            color: white;
+            text-align:;
+            padding: 8px 10px;
+            text-decoration: none;
+            font-size: 1.5em;}
+        li a:hover:not(.active) {background-color: darkorange;}
+    </style>
 
 </head>
 
 <main>
   <body>
     <h1>Frequently Asked Questions</h1>
-    <nav>
-      <header>
-        <li style="display:inline"><a href="./home.html" >Home</a></li><br />
-        <li style="display:inline"><a href="./about.html" >About Us</a></li>
+ <ul>
+  <li> <a href="./home.html"><img src="../Images/group.png" alt="Icon" ></a></li>
+  <li> <a href="home.html">Home</a></li>
+  <li> <a href="about.html">About Us</a></li>
+  <li> <a href=help.html>Help</a></li>
+        </ul>
 
-       <section id="newsletter">
-            <div class="container">
-              <h1>Subscribe to our Newsletter</h1>
-              <form>
-                <input type="email" placeholder="Enter Email...">
-                <button type="submit" class="button_1">Subscribe</button>
-              </form>
-            </div>
-        </section>
+        <p>Question 1</p>
+        <p>Question 2</p>
 
-      </header>
-    </nav>
 
-    <article>
-      <ul>
-        <li>Question 1</li>
-        <li>Question 2</li>
-      </ul>
-    </article>
-
-    <footer>
-      <p>IT485Group, Copyright &copy; 2022</p>
-    </footer>  
+   <footer>
+      <p>Subscribe to our Newsletter</p>
+      <form>
+      <input type="email" placeholder="Enter Email...">
+      <button type="submit" class="button_1">Subscribe</button>
+      </form>
+      <p>Copyright © 2022 Going Data Way All Rights Reserved</p>
+    </footer>
 
   </body>
 </main>
