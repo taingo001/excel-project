@@ -43,6 +43,9 @@ footer{
   color: white;
   text-align: center ;
   background-color: rgb(0, 0, 58);
+  position: relative;
+  margin-top: -180px;
+  height: 180px;
 }
 
 
