@@ -3,7 +3,7 @@ from flask import Flask, redirect, url_for, render_template, request, send_from_
 import pandas as pd
 import csv
 import statistics
-import main.py
+import main
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
