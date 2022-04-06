@@ -90,7 +90,7 @@ def paid():
 			for row in csvfile:
 				data.append(row)
 		data = pd.DataFrame(data)		
-	return render_template("paid.html", data=data.to_html(header=False, index=False)+"Mean of Cost: "+ str(mean2))
+	return render_template("paid.html", data=data.to_html(header=False, index=False)+"Mean of Payed: "+ str(mean2))
 
 @app.route("/owed", methods=["POST", "GET"])
 def owed():
@@ -105,7 +105,7 @@ def owed():
 				data.append(row)
 		data = pd.DataFrame(data)		
 
-	return render_template("owed.html", data= data.to_html(header=False, index=False) +"Mean of Cost: "+ str(mean3))
+	return render_template("owed.html", data= data.to_html(header=False, index=False) +"Mean of Owed: "+ str(mean3))
 
 if __name__ == "__main__":
 	app.run(debug=True)
