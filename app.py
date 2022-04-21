@@ -69,10 +69,14 @@ def cost():
 		f = request.form['cost']
 		df = pd.read_csv(r'test.csv')
 		mean1 = round(df['Cost'].mean(),2)
-		groupby_sum1 = df.groupby(['Cost']).sum()
-		groupby_sum1.append
-		groupby_sum1= pd.DataFrame(groupby_sum1)		
-	return render_template("cost.html", data=groupby_sum1.to_html(header=True, index=True)+"Mean of Cost: "+ str(mean1))
+		data = []
+		with open("static/cost.csv") as file:
+			csvfile = csv.reader(file)
+			for row in csvfile:
+				data.append(row)
+		data = pd.DataFrame(data)
+		
+	return render_template("cost.html", data=data.to_html(header=False, index=False)+"Mean of Cost: "+ str(mean1))
 
 @app.route("/paid", methods=["POST", "GET"])
 def paid():
@@ -80,10 +84,13 @@ def paid():
 		f = request.form['paid']
 		df = pd.read_csv(r'test.csv')
 		mean2 = round(df['Payed'].mean(),2)
-		groupby_sum2 = df.groupby(['Payed']).sum()
-		groupby_sum2.append
-		groupby_sum2= pd.DataFrame(groupby_sum2)	
-	return render_template("paid.html", data=groupby_sum2.to_html(header=True, index=True)+"Mean of Payed: "+ str(mean2))
+		data = []
+		with open("static/payed.csv") as file:
+			csvfile = csv.reader(file)
+			for row in csvfile:
+				data.append(row)
+		data = pd.DataFrame(data)		
+	return render_template("paid.html", data=data.to_html(header=False, index=False)+"Mean of Payed: "+ str(mean2))
 
 @app.route("/owed", methods=["POST", "GET"])
 def owed():
@@ -91,10 +98,14 @@ def owed():
 		f = request.form['owed']
 		df = pd.read_csv(r'test.csv')
 		mean3 = round(df['Owed'].mean(),2)
-		groupby_sum3 = df.groupby(['Owed']).sum()
-		groupby_sum3.append
-		groupby_sum3= pd.DataFrame(groupby_sum3)
-	return render_template("owed.html", data=groupby_sum3.to_html(header=True, index=True) +"Mean of Owed: "+ str(mean3))
+		data = []
+		with open("static/owed.csv") as file:
+			csvfile = csv.reader(file)
+			for row in csvfile:
+				data.append(row)
+		data = pd.DataFrame(data)		
+
+	return render_template("owed.html", data= data.to_html(header=False, index=False) +"Mean of Owed: "+ str(mean3))
 
 if __name__ == "__main__":
 	app.run(debug=True)
