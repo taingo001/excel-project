@@ -2,7 +2,6 @@ from unicodedata import name
 from flask import Flask, redirect, url_for, render_template, request, send_from_directory
 import pandas as pd
 import csv
-import main
 import numpy as np
 import statistics
 
