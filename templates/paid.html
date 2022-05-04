@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/main_styles.css')}}">
+  <title>Going Data Way</title>
+  <link rel="shortcut icon" href="static/Untitled_Artwork.png">
+  <style>
+    img{width: 70px;
+  		height: 70px;
+		}
+ul {
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+list-style-type: none;
+overflow: hidden;
+background-color: #0047ca;
+border-radius: 25px;
+border: 2px solid #022b79;
+padding: 20px; 
+width: 960;
+height: 60px; 
+
+}
+li {
+float: left;
+    }
+  
+li a{
+ width: 20%;
+  color: white;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 1.5em;}
+   li a:hover:not(.active) {background-color: #013ba5;}
+
+body{
+    background-image: linear-gradient(to left, #6892E9, #E6F4F5);
+    background-attachment: fixed;
+  }
+h2{
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+ 
+.footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     text-align: center;
+       }
+   h1{
+     text-align: center;
+     color: black;
+     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      } 
+
+      #hello:hover {
+        letter-spacing: 0.8em;
+        background-color: #0059ff;
+      }
+      
+      #hello {
+        color: white;
+      }
+      button {
+        height: 4em;
+        width: 15%;
+        color: white;
+        padding: 1.5em auto;
+        margin: 1em auto;
+        background-color: #0059ff;
+        border: none;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        transition: all 0.2s cubic-bezier(.4,0,.2,1);
+       
+      }
+    </style>
+
+</head>
+
+<main>
+  <body>
+    <ul>
+  <li> <a href="{{url_for('index') }}"><img src="static/Untitled_Artwork.png" alt="Icon" ></a></li>
+  <li> <a href="{{url_for('index') }}">Home</a></li>
+  <li> <a href="{{url_for('application') }}">Application</a></li>
+  <li> <a href="{{url_for('about') }}" >About Us</a></li>
+  <li> <a href="{{url_for('help') }}" >Help</a></li>
+        </ul>
+    <h3>Customers sorted by Payed</h3>
+    {{data|safe}}
+	<form action="bar2" method="post" enctype="multipart/form-data">
+          <img src="https://cdn-icons.flaticon.com/png/512/3586/premium/3586022.png?token=exp=1651535935~hmac=3fd6026370b5476c03dee8caf644f491" alt="Icon">
+          <br>
+          <input type="submit" id="bar2" name="bar2" value="Bar Graph">
+    </form>
+
+	<form action="line2" method="post" enctype="multipart/form-data">
+          <img src="https://cdn-icons.flaticon.com/png/512/4439/premium/4439482.png?token=exp=1651537042~hmac=73e0209a76dda2c8e7675020573d2654" alt="Icon">
+          <br>
+          <input type="submit" id="line2" name="line2" value="Line Graph">
+    </form>
+
+  </body>
+</main>
+</html>
